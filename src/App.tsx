@@ -5,8 +5,9 @@ import { FilingForm } from './components/Filing/FilingForm';
 import { ProcessingSequence } from './components/Processing/ProcessingSequence';
 import { CaseReportView } from './components/Report/CaseReportView';
 import { submitInvestigation, submitAppeal } from './lib/api';
-import { toggleSound, isSoundEnabled, playBruhTone } from './lib/sound';
-import { Volume2, VolumeX, Shield, Sparkles, Skull, Flame } from 'lucide-react';
+import { toggleSound, isSoundEnabled, playBruhTone, playPop } from './lib/sound';
+import { OrganicBackgroundBlobs } from './components/Doodles/DoodleAccents';
+import { Flame } from 'lucide-react';
 
 export default function App() {
   const [view, setView] = useState<ViewState>('landing');
@@ -89,34 +90,38 @@ export default function App() {
   };
 
   const handleSoundToggle = () => {
+    playPop();
     const newState = toggleSound();
     setAudioActive(newState);
   };
 
   return (
-    <div className="min-h-screen text-[#F8FAFC] flex flex-col justify-between">
-      {/* Top Status Bar - Federal Brainrot Task Force */}
-      <header className="w-full max-w-(--breakpoint-md) mx-auto mt-4 px-4">
-        <div className="flex justify-between items-center py-3 px-5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 font-mono-doc text-xs sm:text-sm text-slate-200 shadow-lg">
+    <div className="min-h-screen text-[#1F1C18] flex flex-col justify-between relative selection:bg-[#FF2A85] selection:text-white">
+      {/* Organic Background Blobs */}
+      <OrganicBackgroundBlobs />
+
+      {/* Top Status Bar - Warm Paper & Friendly Bureau Style */}
+      <header className="w-full max-w-4xl mx-auto mt-4 px-4 relative z-20">
+        <div className="flex justify-between items-center py-2.5 px-4 sm:px-6 rounded-2xl bg-white border-2 border-[#E6DFD1] font-mono-doc text-xs sm:text-sm text-[#1F1C18] shadow-[2px_3px_0px_#E6DFD1]">
           <button
-            onClick={() => setView('landing')}
-            className="flex items-center gap-2 hover:text-[#00f0ff] transition-colors cursor-pointer text-left"
+            onClick={() => { playPop(); setView('landing'); }}
+            className="flex items-center gap-2 hover:text-[#FF5E57] transition-colors cursor-pointer text-left font-bold"
           >
-            <span className="text-base sm:text-lg">💀</span>
-            <span className="font-bold tracking-tight">/ Federal Overthinking & Down Bad Task Force</span>
+            <span className="text-xl">🍌</span>
+            <span className="tracking-tight font-heading text-sm sm:text-base">PAZHAM // Overthinking Task Force</span>
           </button>
 
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-2.5 items-center">
             <button
               id="sfx-toggle"
               type="button"
               onClick={handleSoundToggle}
-              className="cursor-pointer hover:text-[#00f0ff] transition-colors text-xs font-mono-doc font-bold px-2 py-1 rounded-md bg-white/5 border border-white/10"
+              className="cursor-pointer hover:bg-[#FAF6EE] text-[#1F1C18] transition-all text-xs font-mono-doc font-bold px-3 py-1.5 rounded-xl bg-white border-2 border-[#E6DFD1] shadow-xs jelly-hover"
               title={audioActive ? "Mute SFX" : "Enable SFX"}
             >
               {audioActive ? "🔊 SFX: ON" : "🔇 SFX: OFF"}
             </button>
-            <span className="badge-clearance text-[11px] uppercase tracking-wider shrink-0">
+            <span className="bg-[#FFE3EC] text-[#FF2A85] border-2 border-[#FF2A85] text-[11px] font-mono-doc font-black px-2.5 py-1 rounded-xl shadow-[1px_1px_0px_#FF2A85] shrink-0 hidden sm:inline-block">
               ROASTED IN 4K
             </span>
           </div>
@@ -124,7 +129,7 @@ export default function App() {
       </header>
 
       {/* Main Content Area */}
-      <main className="flex-1 flex flex-col items-center justify-center relative z-10">
+      <main className="flex-1 flex flex-col items-center justify-center relative z-10 py-4">
         {view === 'landing' && (
           <Landing onFileCase={() => setView('filing')} />
         )}
@@ -154,14 +159,15 @@ export default function App() {
         )}
       </main>
 
-      {/* Official Government Footer */}
-      <footer className="border-t border-white/10 bg-black/40 backdrop-blur-md py-4 px-4 text-center font-chunky text-xs text-slate-400 relative z-10">
+      {/* Warm Paper Footer */}
+      <footer className="border-t-2 border-[#E6DFD1] bg-white/80 backdrop-blur-md py-4 px-4 text-center font-chunky text-xs text-[#5C5549] relative z-10 mt-6">
         <div className="max-w-xl mx-auto space-y-1">
-          <div className="font-bold text-slate-300">
-            PAZHAM — Department of Unnecessary Intelligence • Official Internet Bureau
+          <div className="font-bold text-[#1F1C18] flex items-center justify-center gap-1.5">
+            <span>PAZHAM — Department of Unnecessary Intelligence</span>
+            <span>🍌</span>
           </div>
-          <div className="text-[11px] text-slate-500">
-            Fictional Bureaucracy for Trivial Overthinking • Built for Useless Projects Hackathon • Receipts Never Expire on God
+          <div className="text-[11px] text-[#8C8275]">
+            Investigating your pettiest overthinking moments with 96.8% confidence in nonsense • Made with ❤️ at TinkerHub Useless Projects
           </div>
         </div>
       </footer>
