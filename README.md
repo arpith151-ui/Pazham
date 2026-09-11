@@ -2,26 +2,32 @@
 
 
 
-# [Project Name] 🎯
+# [PAZHAM--Department of Unnecessary Intelligence] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [PAZHAM]
 
 
 ### Team Members
 - Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 2: [Arpith Antony] - [Aisat]
+- Member 3: [Angel Shaun Mendez] - [Aisat]
 
 ### Project Description
-[2-3 lines about what your project does]
+[PAZHAM investigates your pettiest overthinking moments (like "she replied K")
+through a fake AI-powered government department,delivering absurd offical
+verdicts with genz-chaotic visuals.build with react+gemini for "useless projects"
+hackathon.]
+
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+[We're solving the national crisis of overthinking a"K" text- offically,
+bureauratically,with 96.8% confidence in nonsense.]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[an AI"government department"investigates your overthinking,hands down a ridiculous
+official verdict-and you can even aooeal it.]
 
 ## Technical Details
 ### Technologies/Components Used
@@ -98,6 +104,3 @@ Made with ❤️ at TinkerHub Useless Projects
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
-
-
-
