@@ -27,7 +27,7 @@ bureauratically,with 96.8% confidence in nonsense.]
 
 ### The Solution (that nobody asked for)
 [an AI"government department"investigates your overthinking,hands down a ridiculous
-official verdict-and you can even aooeal it.]
+official verdict-and you can even appeal it.]
 
 ## Technical Details
 ### Technologies/Components Used
